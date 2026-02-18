@@ -1,0 +1,124 @@
+/* 1. Importamos la fuente Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+.navbar {
+  /* Aplicamos la nueva fuente */
+  font-family: 'Poppins', sans-serif;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  /* Aumentamos el tamaño: más padding vertical y horizontal */
+  padding: 1.5rem 10%; 
+  
+  /* Vidrio más sólido para que las letras resalten más */
+  background-color: rgba(220, 10, 45, 0.9); 
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  /* Letras más grandes y negrita extra */
+  font-size: 2rem; 
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -1px; /* Toque moderno: letras un poco más juntas */
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+}
+
+.links {
+  display: flex;
+  gap: 2.5rem; /* Más separación entre links */
+  list-style: none;
+}
+
+.links a {
+  /* Letras más visibles: blanco casi puro y más peso */
+  color: rgba(255, 255, 255, 0.95); 
+  font-weight: 600;
+  font-size: 1.1rem; 
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.7rem 1.2rem;
+  border-radius: 12px;
+}
+
+.links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transform: translateY(-2px); /* Pequeña animación de subida */
+}
+
+.active {
+  background-color: #ffffff; /* Fondo blanco sólido para resaltar el activo */
+  color: #dc0a2d !important; /* Letras rojas para que contraste */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+}
+
+/* Ajuste para móviles */
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1.2rem 5%;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  
+  .links {
+    gap: 1rem;
+  }
+  
+  .links a {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .active {
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+
+  .links {
+    width: 100%;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .links a {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .active {
+    padding: 0.4rem 0.6rem;
+    border-radius: 10px;
+  }
+}

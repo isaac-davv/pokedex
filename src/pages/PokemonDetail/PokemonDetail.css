@@ -1,0 +1,337 @@
+.pokemon-detail {
+  padding: 2rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: white;
+  color: #dc0a2d;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.detail-card {
+  background: white;
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.detail-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.detail-id {
+  color: #999;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.detail-name {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  margin: 0.5rem 0;
+  color: #333;
+  letter-spacing: -1px;
+}
+
+.detail-types {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.detail-image {
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  display: block;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
+}
+
+.detail-info {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.info-item {
+  text-align: center;
+}
+
+.info-label {
+  display: block;
+  color: #999;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.info-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.detail-stats {
+  margin-top: 2rem;
+}
+
+.detail-stats h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: #333;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.stat-name {
+  width: 130px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #666;
+}
+
+.stat-bar {
+  flex: 1;
+  height: 10px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.stat-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #dc0a2d, #ff6b6b);
+  border-radius: 10px;
+  transition: width 0.5s ease-out;
+}
+
+.stat-value {
+  width: 40px;
+  text-align: right;
+  font-weight: 700;
+  color: #333;
+}
+
+.detail-abilities {
+  margin-top: 2rem;
+}
+
+.detail-abilities h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: #333;
+}
+
+.abilities-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ability {
+  background: #f0f0f0;
+  padding: 0.6rem 1.25rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #555;
+}
+
+.favorite-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #dc0a2d, #ff6b6b);
+  color: white;
+  box-shadow: 0 4px 16px rgba(220, 10, 45, 0.3);
+  transition: all 0.3s;
+}
+
+.favorite-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(220, 10, 45, 0.4);
+}
+
+.favorite-button.active {
+  background: linear-gradient(135deg, #333, #555);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-button.active:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .pokemon-detail {
+    padding: 1rem;
+  }
+
+  .detail-card {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .detail-name {
+    font-size: 1.8rem;
+  }
+
+  .detail-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .detail-info {
+    gap: 2rem;
+  }
+
+  .stat-name {
+    width: 100px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Colores de fondo por tipo */
+.detail-card.normal { background: linear-gradient(135deg, #A8A878, #C6C6A7); }
+.detail-card.fire { background: linear-gradient(135deg, #F08030, #F5AC78); }
+.detail-card.water { background: linear-gradient(135deg, #6890F0, #9DB7F5); }
+.detail-card.electric { background: linear-gradient(135deg, #F8D030, #FAE078); }
+.detail-card.grass { background: linear-gradient(135deg, #78C850, #A7DB8D); }
+.detail-card.ice { background: linear-gradient(135deg, #98D8D8, #BCE6E6); }
+.detail-card.fighting { background: linear-gradient(135deg, #C03028, #D67873); }
+.detail-card.poison { background: linear-gradient(135deg, #A040A0, #C183C1); }
+.detail-card.ground { background: linear-gradient(135deg, #E0C068, #EBD69D); }
+.detail-card.flying { background: linear-gradient(135deg, #A890F0, #C6B7F5); }
+.detail-card.psychic { background: linear-gradient(135deg, #F85888, #FA92B2); }
+.detail-card.bug { background: linear-gradient(135deg, #A8B820, #C6D16E); }
+.detail-card.rock { background: linear-gradient(135deg, #B8A038, #D1C17D); }
+.detail-card.ghost { background: linear-gradient(135deg, #705898, #A292BC); }
+.detail-card.dragon { background: linear-gradient(135deg, #7038F8, #A27DFA); }
+.detail-card.dark { background: linear-gradient(135deg, #705848, #A29288); }
+.detail-card.steel { background: linear-gradient(135deg, #B8B8D0, #D1D1E0); }
+.detail-card.fairy { background: linear-gradient(135deg, #EE99AC, #F4BDC9); }
+
+/* Texto blanco para tipos oscuros */
+.detail-card.fire,
+.detail-card.water,
+.detail-card.fighting,
+.detail-card.poison,
+.detail-card.ghost,
+.detail-card.dragon,
+.detail-card.dark,
+.detail-card.psychic {
+  color: white;
+}
+
+.detail-card.fire .detail-id,
+.detail-card.water .detail-id,
+.detail-card.fighting .detail-id,
+.detail-card.poison .detail-id,
+.detail-card.ghost .detail-id,
+.detail-card.dragon .detail-id,
+.detail-card.dark .detail-id,
+.detail-card.psychic .detail-id {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.detail-card.fire .detail-name,
+.detail-card.water .detail-name,
+.detail-card.fighting .detail-name,
+.detail-card.poison .detail-name,
+.detail-card.ghost .detail-name,
+.detail-card.dragon .detail-name,
+.detail-card.dark .detail-name,
+.detail-card.psychic .detail-name,
+.detail-card.fire .detail-stats h2,
+.detail-card.water .detail-stats h2,
+.detail-card.fighting .detail-stats h2,
+.detail-card.poison .detail-stats h2,
+.detail-card.ghost .detail-stats h2,
+.detail-card.dragon .detail-stats h2,
+.detail-card.dark .detail-stats h2,
+.detail-card.psychic .detail-stats h2,
+.detail-card.fire .detail-abilities h2,
+.detail-card.water .detail-abilities h2,
+.detail-card.fighting .detail-abilities h2,
+.detail-card.poison .detail-abilities h2,
+.detail-card.ghost .detail-abilities h2,
+.detail-card.dragon .detail-abilities h2,
+.detail-card.dark .detail-abilities h2,
+.detail-card.psychic .detail-abilities h2 {
+  color: white;
+}
+
+.detail-card.fire .info-label,
+.detail-card.water .info-label,
+.detail-card.fighting .info-label,
+.detail-card.poison .info-label,
+.detail-card.ghost .info-label,
+.detail-card.dragon .info-label,
+.detail-card.dark .info-label,
+.detail-card.psychic .info-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.detail-card.fire .info-value,
+.detail-card.water .info-value,
+.detail-card.fighting .info-value,
+.detail-card.poison .info-value,
+.detail-card.ghost .info-value,
+.detail-card.dragon .info-value,
+.detail-card.dark .info-value,
+.detail-card.psychic .info-value,
+.detail-card.fire .stat-value,
+.detail-card.water .stat-value,
+.detail-card.fighting .stat-value,
+.detail-card.poison .stat-value,
+.detail-card.ghost .stat-value,
+.detail-card.dragon .stat-value,
+.detail-card.dark .stat-value,
+.detail-card.psychic .stat-value {
+  color: white;
+}
+
+.detail-card.fire .stat-name,
+.detail-card.water .stat-name,
+.detail-card.fighting .stat-name,
+.detail-card.poison .stat-name,
+.detail-card.ghost .stat-name,
+.detail-card.dragon .stat-name,
+.detail-card.dark .stat-name,
+.detail-card.psychic .stat-name {
+  color: rgba(255, 255, 255, 0.8);
+}
