@@ -92,6 +92,24 @@
   box-shadow: 0 6px 24px rgba(220, 10, 45, 0.4);
 }
 
+/* Nueva corrección */
+.success-message {
+  background: linear-gradient(135deg, #4CAF50, #81C784);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* Responsive */
 @media (max-width: 480px) {
   .contact {

@@ -1,7 +1,10 @@
 import { useForm } from 'react-hook-form'
+import { useState } from 'react'
 import './Contact.css'
 
 const Contact = () => {
+  const [successMessage, setSuccessMessage] = useState(false)
+  
   const { 
     register, 
     handleSubmit, 
@@ -11,14 +14,25 @@ const Contact = () => {
 
   const onSubmit = (data) => {
     console.log('Datos enviados:', data)
-    alert('¡Mensaje enviado correctamente!')
+    setSuccessMessage(true)
     reset()
+    
+    // Ocultar mensaje después de 3 segundos
+    setTimeout(() => {
+      setSuccessMessage(false)
+    }, 3000)
   }
 
   return (
     <main className="contact">
       <h1 className="contact-title">Contacto</h1>
       <p className="contact-subtitle">¿Encontraste algún error? ¿Tienes sugerencias?</p>
+
+      {successMessage && (
+        <div className="success-message">
+          ✅ ¡Mensaje enviado correctamente!
+        </div>
+      )}
 
       <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">

@@ -8,15 +8,15 @@ import Contact from './pages/Contact/Contact'
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/pokemon/:name' element={<PokemonDetail />} />
-        <Route path='/favorites' element={<Favorites />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/pokemon/:name" element={<PokemonDetail />} />
+        <Route path="/favorites" element={<Favorites />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </div>
+    </>
   )
 }
 
